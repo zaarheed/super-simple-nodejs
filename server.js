@@ -6,7 +6,6 @@ const passport = require("passport");
 const passportConfig = require('./config/passport');
 const api = require('./api');
 const port = process.env.PORT || 8000;
-const router = express.Router();
 
 passport.use(passportConfig.jwtStrategy);
 passport.use(passportConfig.apiKeyStrategy);
