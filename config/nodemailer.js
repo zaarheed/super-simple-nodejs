@@ -5,16 +5,15 @@ module.exports = {
 }
 
 function sendMail(message) {
-    console.log("send mail...");
+    
     if (!message) {
-        console.log("no message");
         return;
     }
 
     let transporter = nodemailer.createTransport({
         host: "hostname.com",
         port: 587,
-        secure: false, // upgrade later with STARTTLS
+        secure: false,
         auth: {
             user: "my@hostname.com",
             pass: "Password!"
